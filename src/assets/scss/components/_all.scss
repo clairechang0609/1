@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+    // 字體平滑
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $primary;
+    letter-spacing: 0.1rem;
+    @include media-sm {
+        letter-spacing: 0.15rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style-type: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+// card
+.card {
+    @include custom-border;
+    &.rounded-card {
+        box-shadow: 0 3px 0 $black;
+    }
+}
+
+// pointer events
+.cursor-pointer {
+    cursor: pointer;
+}
+.pointer-events-none {
+    pointer-events: none;
+}
+
+// input
+.form-control {
+    @include custom-border;
+    padding: 0.65rem 1.5rem;
+    height: auto;
+    outline: none !important;
+    box-shadow: none !important;
+    color: $black;
+    &::placeholder {
+        color: $gray-600;
+    }
+    &:focus {
+        border-color: $black;
+    }
+    &:disabled {
+        border-color: $gray-500;
+        background-color: $gray-200;
+        color: $gray-700;
+    }
+}
+
+// btn
+.btn {
+    @include custom-border;
+    padding: 0.65rem 1.5rem;
+    outline: none;
+    box-shadow: -2px 2px 0px $black;
+    text-align: center;
+    &:disabled {
+        box-shadow: none;
+        border-color: $gray-700;
+        background-color: $gray-600;
+        color: white;
+        pointer-events: none;
+    }
+    &.btn-primary {
+        &:hover, &:active, &.active, &:focus {
+            @include custom-border;
+            background-color: $secondary;
+            color: $black;
+            outline: none;
+            box-shadow: -2px 2px 0px $black;
+        }
+    }
+    &.btn-secondary {
+        &:hover, &:active, &.active, &:focus {
+            @include custom-border;
+            background-color: $primary;
+            color: white;
+            outline: none;
+            box-shadow: -2px 2px 0px $black;
+        }
+    }
+    &.btn-light {
+        &:hover, &:active, &.active, &:focus {
+            @include custom-border;
+            background-color: $light;
+            color: $black;
+            outline: none;
+            box-shadow: -2px 2px 0px $black;
+        }
+    }
+    &.btn-sm {
+        padding: 0.45rem 1rem;
+        border-radius: 0.5rem;
+    }
+}
+
+// checkbox & radio
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    @include custom-border;
+    &:checked, &:focus {
+        @include custom-border;
+        background-color: white !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'%3e%3ccircle r='2' fill='%23000'/%3e%3c/svg%3e") !important;
+        outline: none !important;
+        box-shadow: none;
+    }
+}
+.form-check-label {
+    line-height: 1.8;
+}
