@@ -23,6 +23,4 @@ const isDebugMode = import.meta.env.MODE !== 'production';
 app.config.debug = isDebugMode;
 app.config.devtools = isDebugMode;
 
-console.log(import.meta.env);
-
 app.mount('#app');
