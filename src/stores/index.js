@@ -672,7 +672,7 @@ export default defineStore('work', {
 	}),
 	actions: {
 		getImageUrl(category, image) {
-			return `./src/assets/image/${category}/${image}`;
+			return `/src/assets/image/${category}/${image}`;
 		}
 	}
 });
