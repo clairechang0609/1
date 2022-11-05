@@ -23,7 +23,7 @@
 		</div>
 		<ul class="image-content pt-4 pt-md-5">
 			<li class="image-wrap mb-4 mb-md-5" :alt="item" v-for="item in collection.images" :key="item">
-				<img :src="getImageUrl(route.params?.category, item)" class="image w-100">
+				<img :src="`/image/${route.params?.category}/${item}`" class="image w-100">
 			</li>
 		</ul>
 		<div>
@@ -43,7 +43,7 @@ export default {
 	name: 'Work',
 	setup() {
 		const route = useRoute();
-		const { works, getImageUrl } = defaultStore();
+		const { works } = defaultStore();
 		const category = computed(() => works[route.params?.category]);
 		const collection = computed(() => {
 			return category.value?.collections?.find(item => item.id === Number(route.params?.id));
@@ -55,9 +55,7 @@ export default {
 			works,
 			// computed
 			category,
-			collection,
-			// methods
-			getImageUrl
+			collection
 		};
 	}
 };

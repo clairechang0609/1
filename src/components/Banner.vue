@@ -2,7 +2,7 @@
 	<Swiper class="swiper mb-2" :loop="true" :slides-per-view="1"
 		:autoplay="{ delay: 3000, disableOnInteraction: false }">
 		<SwiperSlide v-for="(item, key) in banner" :key="`banner_${key}`" class="bg-light">
-			<img :src="getImageUrl('banner', item)" alt="banner" class="banner">
+			<img :src="`/image/banner/${item}`" alt="banner" class="banner">
 		</SwiperSlide>
 	</Swiper>
 </template>
@@ -21,7 +21,6 @@ export default {
 		SwiperSlide
 	},
 	setup() {
-		const { getImageUrl } = defaultStore();
 		const banner = [
 			'banner-1.jpg',
 			'banner-2.jpg',
@@ -31,11 +30,12 @@ export default {
 			'banner-6.jpg'
 		];
 
+		const importUrl = import.meta.url;
+
 		return {
 			// data
 			banner,
-			// methods
-			getImageUrl
+			importUrl
 		};
 	}
 };

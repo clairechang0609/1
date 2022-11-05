@@ -73,7 +73,7 @@
 						<router-link :to="`work/${key}/${item.id}`" class="work-item">
 							<small class="d-block fw-bold mb-3">{{ item.date }} ｜ {{ item.masthead }}</small>
 							<div class="image-wrap position-relative bg-light mb-3">
-								<img :src="getImageUrl(key, item.images[0])" :alt="item.masthead" class="image position-absolute">
+								<img :src="`/image/${key}/${item.images[0]}`" :alt="item.masthead" class="image position-absolute">
 							</div>
 						</router-link>
 					</li>
@@ -101,7 +101,7 @@ export default {
 		Banner
 	},
 	setup() {
-		const { works, getImageUrl } = defaultStore();
+		const { works } = defaultStore();
 		const experience = [ // 經歷
 			{
 				during: '2019-now',
@@ -165,8 +165,7 @@ export default {
 			experience,
 			works,
 			// methods
-			showElement,
-			getImageUrl
+			showElement
 		};
 	}
 };
