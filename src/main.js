@@ -8,6 +8,10 @@ import App from './App.vue';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import { createPinia } from 'pinia';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'animate.css/animate.css';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.scss';
 
 const pinia = createPinia();
 

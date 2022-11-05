@@ -11,7 +11,7 @@ export default defineConfig((mode) => {
 		base: process.env.NODE_ENV === 'production' ? '/daniel-work/' : './',
 		resolve: {
 			alias: {
-				'@': path.resolve(__dirname, './src'),
+				'@': path.resolve(__dirname, './src')
 			}
 		},
 		css: {
