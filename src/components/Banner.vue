@@ -2,7 +2,7 @@
 	<Swiper class="swiper mb-2" :loop="true" :slides-per-view="1"
 		:autoplay="{ delay: 3000, disableOnInteraction: false }">
 		<SwiperSlide v-for="(item, key) in banner" :key="`banner_${key}`" class="bg-light">
-			<img :src="`/image/banner/${item}`" alt="banner" class="banner">
+			<img :src="`image/banner/${item}`" alt="banner" class="banner">
 		</SwiperSlide>
 	</Swiper>
 </template>
