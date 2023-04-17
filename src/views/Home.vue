@@ -52,11 +52,11 @@
 				</div>
 				<div class="col-sm-4 align-self-end">
 					<div class="image-wrap bg-light mb-2 mb-md-4"></div>
-					<div class="text-end mb-2">
+					<!-- <div class="text-end mb-2">
 						<a href="#" class="profile-link fs-7 ms-auto py-1">
 							profile<i class="bi bi-arrow-right ms-1"></i>
 						</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -104,12 +104,22 @@ export default {
 		const { works } = defaultStore();
 		const experience = [ // 經歷
 			{
-				during: '2019-now',
+				during: '2023-now',
+				company: '',
+				title: 'Freelance Editor',
+				publish: [
+					'Infinite 台新無限季刊（台新銀行無限卡會員刊物）',
+					'合庫樂活理財季刊（合作金庫理財季刊）',
+					'terroir 肥沃台灣（台灣肥料企業形象刊物）'
+				]
+			},
+			{
+				during: '2019-2023',
 				company: '華訊事業股份有限公司',
 				title: '副總編輯',
 				titleList: [
 					{
-						during: '2022-now',
+						during: '2022-2023',
 						name: '代編部 副總編輯'
 					},
 					{
