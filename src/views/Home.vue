@@ -6,26 +6,10 @@
 				<div class="col-md-12">
 					<small>我們不只是用相機拍照。我們帶到攝影中的是所有我們讀過的書、看過的電影、聽過的音樂、愛過的人。 — Ansel Adams</small>
 				</div>
-				<!-- about -->
-				<!-- <div class="col-md-5">
-					<div class="guide-card bg-white ms-auto position-relative py-4 px-md-5">
-						<div class="mb-3">
-							<h4 class="title d-sm-inline-block lh-lg me-3">關於我</h4>
-							<h5 class="subtitle">about</h5>
-						</div>
-						<small class="d-block lh-lg">
-							<span class="name fs-7 fw-bold">Daniel Chang 張景棠</span> <br />
-							Editor - Writer - Shutterbug <br />
-							Born｜1989.01.07 <br />
-							Hometown｜Taipei <br />
-							Residence｜New Taipei City
-						</small>
-					</div>
-				</div> -->
 			</div>
 		</div>
-		<!-- experience -->
-		<div id="experience" class="experience-content mx-auto py-3 py-sm-4 py-md-5">
+		<!-- about -->
+		<div id="about" class="experience-content mx-auto py-3 py-sm-4 py-md-5">
 			<div class="mb-3">
 				<h4 class="title lh-lg me-4 fs-md-2">關於我</h4>
 				<h5 class="subtitle fs-md-4">about</h5>

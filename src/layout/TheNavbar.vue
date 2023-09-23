@@ -1,9 +1,9 @@
 <template>
 	<nav class="navbar fixed-top px-3 bg-white" ref="navbar">
 		<div class="navbar-content d-flex align-items-center justify-content-between w-100 h-100 mx-auto">
-			<h1 class="logo px-3 px-md-5 mt-4" ref="logo">
-				<router-link :to="{ name: 'Home' }" title="Daniel Portfolio" class="h-100">
-					Daniel Portfolio
+			<h1 class="logo px-3 px-md-4" ref="logo">
+				<router-link :to="{ name: 'Home' }" title="freestylestudio">
+					<img src="@/assets/image/logo.png">
 				</router-link>
 			</h1>
 			<ul class="menu">
@@ -22,8 +22,8 @@ export default {
 		return {
 			menuList: [
 				{
-					id: 'experience',
-					name: 'experience'
+					id: 'about',
+					name: 'about'
 				},
 				{
 					id: 'work',
@@ -70,19 +70,9 @@ export default {
 			max-width: $container-width;
 		}
 		.logo {
-			height: 80px;
-			filter: drop-shadow(3px 3px 0 $white);
-			transition: 0.3s ease-in-out;
-			@include media-md {
-				height: 100px;
-			}
-			a {
-				display: block;
-				background: url('@/assets/image/logo.svg') no-repeat;
-				width: 100px;
-				text-indent: 101%;
-				overflow: hidden;
-				white-space: nowrap;
+			img {
+				width: 250px;
+				filter: drop-shadow(0 3px 0 $white);
 			}
 		}
 		.menu {

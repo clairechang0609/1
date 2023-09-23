@@ -8,7 +8,6 @@ export default defineConfig((mode) => {
 
 	return {
 		plugins: [vue()],
-		// base: process.env.NODE_ENV === 'production' ? '/daniel-work/' : './',
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, './src')
