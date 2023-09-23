@@ -23,7 +23,7 @@
 		</div>
 		<ul class="image-content pt-4 pt-md-5">
 			<li class="image-wrap mb-4 mb-md-5" :alt="item" v-for="item in collection.images" :key="item">
-				<img :src="`./image/${route.params?.category}/${item}`" class="image w-100">
+				<img :src="`/image/${route.params?.category}/${item}`" class="image w-100">
 			</li>
 		</ul>
 		<div>

@@ -3,11 +3,11 @@
 		<div class="swiper-wrap mx-auto">
 			<Banner />
 			<div class="row gx-md-5">
-				<div class="col-md-7">
+				<div class="col-md-12">
 					<small>我們不只是用相機拍照。我們帶到攝影中的是所有我們讀過的書、看過的電影、聽過的音樂、愛過的人。 — Ansel Adams</small>
 				</div>
 				<!-- about -->
-				<div class="col-md-5">
+				<!-- <div class="col-md-5">
 					<div class="guide-card bg-white ms-auto position-relative py-4 px-md-5">
 						<div class="mb-3">
 							<h4 class="title d-sm-inline-block lh-lg me-3">關於我</h4>
@@ -21,17 +21,17 @@
 							Residence｜New Taipei City
 						</small>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<!-- experience -->
 		<div id="experience" class="experience-content mx-auto py-3 py-sm-4 py-md-5">
+			<div class="mb-3">
+				<h4 class="title lh-lg me-4 fs-md-2">關於我</h4>
+				<h5 class="subtitle fs-md-4">about</h5>
+			</div>
 			<div class="row gx-md-5">
-				<div class="col-sm-8 mb-3 mb-sm-0">
-					<div class="mb-3 mb-md-5">
-						<h4 class="title lh-lg me-4 fs-md-2">工作經歷</h4>
-						<h5 class="subtitle fs-md-4">experience</h5>
-					</div>
+				<div class="col-sm-8 mb-3 mb-sm-0 order-2 order-sm-1">
 					<ul class="lh-lg">
 						<li v-for="(item, index) in experience" :key="`experience_${index}`" class="mt-3">
 							<p class="fw-bold fs-7">
@@ -50,7 +50,11 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-sm-4 align-self-end">
+				<div class="col-sm-4 align-self-end order-1 order-sm-2">
+					<small class="d-block lh-lg mb-3">
+						<span class="name fs-7 fw-bold">Daniel Chang 張景棠</span> <br />
+						Editor - Writer - Shutterbug
+					</small>
 					<div class="image-wrap bg-light mb-2 mb-md-4"></div>
 					<!-- <div class="text-end mb-2">
 						<a href="#" class="profile-link fs-7 ms-auto py-1">
@@ -73,7 +77,7 @@
 						<router-link :to="`work/${key}/${item.id}`" class="work-item">
 							<small class="d-block fw-bold mb-3">{{ item.date }} ｜ {{ item.masthead }}</small>
 							<div class="image-wrap position-relative bg-light mb-3">
-								<img :src="`./image/${key}/${item.images[0]}`" :alt="item.masthead" class="image position-absolute">
+								<img :src="`/image/${key}/${item.images[0]}`" :alt="item.masthead" class="image position-absolute">
 							</div>
 						</router-link>
 					</li>
@@ -85,7 +89,8 @@
 			<h3 class="title position-absolute">contact</h3>
 			<p class="mb-2">專題企劃、採訪撰稿歡迎來信</p>
 			<i class="bi bi-envelope d-block mb-2"></i>
-			<a href="mailto:danielchang0281@gmail.com" class="email fs-7" target="_blank" rel="noreferrer noopener">danielchang0281@gmail.com</a>
+			<a href="mailto:danielchang0281@gmail.com" class="email fs-7" target="_blank" rel="noreferrer noopener">danielchang0281@gmail.com</a> <br />
+			<a href="https://www.instagram.com/freestylestudio0281/" class="email fs-7" target="_blank" rel="noreferrer noopener">instagram: 自由製造</a>
 		</div>
 	</div>
 </template>
@@ -105,13 +110,9 @@ export default {
 		const experience = [ // 經歷
 			{
 				during: '2023-now',
-				company: '',
-				title: 'Freelance Editor',
-				publish: [
-					'Infinite 台新無限季刊（台新銀行無限卡會員刊物）',
-					'合庫樂活理財季刊（合作金庫理財季刊）',
-					'terroir 肥沃台灣（台灣肥料企業形象刊物）'
-				]
+				company: '自由製造有限公司',
+				title: 'Founder',
+				publish: []
 			},
 			{
 				during: '2019-2023',
@@ -294,6 +295,7 @@ export default {
 			transform: translateX(-50%);
 		}
 		.email {
+			text-decoration: underline;
 			&:hover {
 				opacity: 0.6;
 			}
