@@ -110,9 +110,16 @@ export default {
 	components: {
 		Banner
 	},
+	beforeRouteEnter: ((to, from, next) => {
+		next(vm => {
+			if (from.path === '/') {
+				vm.isEnter = false;
+			}
+		});
+	}),
 	setup() {
 		const { works } = defaultStore();
-		const isEnter = ref(false);
+		const isEnter = ref(true);
 		const experience = [ // 經歷
 			{
 				during: '2023-now',
@@ -197,15 +204,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.v-enter-active,
+	// .v-enter-active,
 	.v-leave-active {
 		transition: opacity 0.5s;
 	}
-	.v-enter-from,
+	// .v-enter-from,
 	.v-leave-to {
 		opacity: 0;
 	}
-	.v-enter-to,
+	// .v-enter-to,
 	.v-leave-from {
 		opacity: 1;
 	}

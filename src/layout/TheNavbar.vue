@@ -1,7 +1,7 @@
 <template>
 	<nav class="navbar fixed-top px-3 bg-white" ref="navbar">
 		<div class="navbar-content d-flex align-items-center justify-content-between w-100 h-100 mx-auto">
-			<h1 class="logo px-3 px-md-4" ref="logo">
+			<h1 class="logo px-md-3" ref="logo">
 				<router-link :to="{ name: 'Home' }" title="freestylestudio">
 					<img src="@/assets/image/logo.png">
 				</router-link>
@@ -51,8 +51,8 @@ export default {
 				this.$refs.navbar.style.height = '60px';
 				this.$refs.logo.style.height = '60px';
 			} else {
-				this.$refs.navbar.style.height = '100px';
-				this.$refs.logo.style.height = '100px';
+				this.$refs.navbar.style.height = '90px';
+				this.$refs.logo.style.height = '90px';
 			}
 		}
 	}
@@ -71,8 +71,11 @@ export default {
 		}
 		.logo {
 			img {
-				width: 250px;
+				width: 200px;
 				filter: drop-shadow(0 3px 0 $white);
+				@include media-md {
+					width: 250px;
+				}
 			}
 		}
 		.menu {
