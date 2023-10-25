@@ -1,6 +1,5 @@
 <template>
-	<Swiper class="swiper mb-2" :loop="true" :slides-per-view="1"
-		:autoplay="{ delay: 3000, disableOnInteraction: false }">
+	<Swiper @swiper="onSwiper" class="swiper mb-2" :modules="modules" :loop="true" :slides-per-view="1">
 		<SwiperSlide v-for="(item, key) in banner" :key="`banner_${key}`" class="bg-light">
 			<img :src="`/image/banner/${item}`" alt="banner" class="banner">
 		</SwiperSlide>
@@ -9,10 +8,9 @@
 
 <script>
 import defaultStore from '@/stores/index';
-import SwiperCore, { Autoplay, Pagination, Navigation, Mousewheel } from 'swiper';
+import { watch, ref } from 'vue';
+import { Autoplay, Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
-SwiperCore.use([ Autoplay, Pagination, Navigation, Mousewheel ]);
 
 export default {
 	name: 'Banner',
@@ -20,7 +18,28 @@ export default {
 		Swiper,
 		SwiperSlide
 	},
-	setup() {
+	props: {
+		startAutoplay: {
+			type: Boolean,
+			default: false
+		}
+	},
+	setup(props) {
+		let swiper = ref({});
+
+		watch(() => props.startAutoplay,
+			(newVal, _oldVal) => {
+				if (newVal) {
+					console.log(swiper);
+					swiper.autoplay.start();
+				}
+			}
+		);
+
+		const onSwiper = instance => {
+			swiper = instance;
+		}
+
 		const banner = [
 			'banner-1.jpg',
 			'banner-2.jpg',
@@ -35,7 +54,10 @@ export default {
 		return {
 			// data
 			banner,
-			importUrl
+			importUrl,
+			modules: [ Autoplay, Navigation, Pagination, Mousewheel ],
+			// methods
+			onSwiper
 		};
 	}
 };

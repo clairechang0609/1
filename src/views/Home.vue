@@ -21,7 +21,7 @@
 		</transition>
 		<div v-show="isEnter">
 			<div class="swiper-wrap mx-auto">
-				<Banner />
+				<Banner :start-autoplay="isEnter" />
 				<div class="row gx-md-5">
 					<div class="col-md-12">
 						<small>我們不只是用相機拍照。我們帶到攝影中的是所有我們讀過的書、看過的電影、聽過的音樂、愛過的人。 — Ansel Adams</small>
