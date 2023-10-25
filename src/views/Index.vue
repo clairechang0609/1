@@ -5,12 +5,13 @@
 			<router-view></router-view>
 		</div>
 		<div class="footer text-center border-top border-dark py-4 py-md-5">
-			<small>Copyright © daniel 2022, All rights reserved.</small>
+			<small>Copyright © daniel {{ currentYear }}, All rights reserved.</small>
 		</div>
 	</div>
 </template>
 
 <script>
+import { computed } from 'vue';
 import TheNavbar from '@/layout/TheNavbar.vue';
 
 export default {
@@ -18,8 +19,14 @@ export default {
 	components: {
 		TheNavbar
 	},
-	data() {
-		return {};
+	setup() {
+		const currentYear = computed(() => {
+			return new Date().getFullYear();
+		});
+
+		return {
+			currentYear
+		}
 	}
 };
 </script>

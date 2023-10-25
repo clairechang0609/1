@@ -1,9 +1,12 @@
 body {
-    font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+    color: $primary;
+}
+
+* {
+    font-family: 'Poppins', 'Noto Sans TC', sans-serif !important;
     // 字體平滑
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: $primary;
     letter-spacing: 0.1rem;
     @include media-sm {
         letter-spacing: 0.15rem;
