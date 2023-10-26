@@ -30,14 +30,16 @@ export default {
 		watch(() => props.startAutoplay,
 			(newVal, _oldVal) => {
 				if (newVal) {
-					console.log(swiper);
 					swiper.autoplay.start();
+				} else {
+					swiper.autoplay.stop();
 				}
 			}
 		);
 
 		const onSwiper = instance => {
 			swiper = instance;
+			swiper.autoplay.start();
 		}
 
 		const banner = [
