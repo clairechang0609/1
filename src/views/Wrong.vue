@@ -23,7 +23,7 @@ export default {
 	.btn {
 		width: 200px;
 		&:hover {
-			background-color: $secondary;
+			background-color: $gray-300;
 			color: $black;
 		}
 	}

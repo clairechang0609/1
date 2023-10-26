@@ -16,7 +16,12 @@ export default defineConfig((mode) => {
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@import "@/assets/scss/app.scss";'
+					additionalData: `
+						@import "@/assets/scss/components/_color.scss";
+						@import "@/assets/scss/components/_grid.scss";
+						@import "@/assets/scss/components/_mixin.scss";
+						@import "@/assets/scss/components/_typography.scss";
+					`
 				}
 			}
 		}

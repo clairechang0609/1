@@ -11,7 +11,17 @@ $gray-900: #272727 !default;
 $black: #000000 !default;
 
 $primary: $black !default;
-$secondary: #EEC32A !default;
+$secondary: #ffda52 !default;
 $success: #83C51D !default;
 $danger: #F57375 !default;
 $light: $gray-200 !default;
+$transparent: transparent !default;
+
+$theme-colors: (
+	"primary":       $primary,
+	"secondary":     $secondary,
+	"success":       $success,
+	"danger":        $danger,
+	"light":         $light,
+	"transparent":   $transparent
+);
