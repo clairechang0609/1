@@ -25,21 +25,21 @@ export default {
 		}
 	},
 	setup(props) {
-		let swiper = ref({});
+		const swiperInstance = ref(null);
 
 		watch(() => props.startAutoplay,
 			(newVal, _oldVal) => {
 				if (newVal) {
-					swiper.autoplay.start();
+					swiperInstance.value.autoplay.start();
 				} else {
-					swiper.autoplay.stop();
+					swiperInstance.value.autoplay.stop();
 				}
 			}
 		);
 
 		const onSwiper = instance => {
-			swiper = instance;
-			swiper.autoplay.start();
+			swiperInstance.value = instance;
+			swiperInstance.value.autoplay.start();
 		}
 
 		const banner = [
