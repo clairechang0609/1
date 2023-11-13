@@ -23,7 +23,8 @@
 		</div>
 		<ul class="image-content pt-4 pt-md-5">
 			<li class="image-wrap mb-4 mb-md-5" :alt="item" v-for="item in collection.images" :key="item">
-				<img :src="`/image/${route.params?.category}/${item}`" class="image w-100">
+				<img :data-src="`/image/${route.params?.category}/${item}`" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+					class="lazyload image w-100">
 			</li>
 		</ul>
 		<div>

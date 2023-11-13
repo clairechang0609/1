@@ -11,6 +11,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'animate.css/animate.css';
 import 'swiper/css/bundle';
 import 'swiper/css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const pinia = createPinia();
 

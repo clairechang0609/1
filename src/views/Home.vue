@@ -81,7 +81,8 @@
 							<router-link :to="`work/${key}/${item.id}`" class="work-item">
 								<small class="d-block fw-bold mb-3">{{ item.date }} ｜ {{ item.masthead }}</small>
 								<div class="image-wrap position-relative bg-light mb-3">
-									<img :src="`/image/${key}/${item.images[0]}`" :alt="item.masthead" class="image position-absolute">
+									<img :data-src="`/image/${key}/${item.images[0]}`" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+										:alt="item.masthead" class="lazyload image position-absolute">
 								</div>
 							</router-link>
 						</li>
