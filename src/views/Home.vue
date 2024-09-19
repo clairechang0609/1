@@ -91,6 +91,18 @@
 	</div>
 </template>
 
+<script>
+export default {
+	beforeRouteEnter: ((to, from, next) => {
+		next(vm => {
+			if (from.path === '/') {
+				vm.isEnter = false;
+			}
+		});
+	})
+}
+</script>
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRoute, onBeforeRouteUpdate } from 'vue-router';
@@ -99,7 +111,7 @@ import { useStore } from '@/stores/index';
 import Banner from '@/components/Banner.vue';
 
 const store = useStore();
-const isEnter = ref(true);
+const isEnter = ref(false);
 
 // 顯示內容動態效果
 const showElement = () => {
@@ -117,14 +129,6 @@ const toggleBodyClass = () => {
 	body.classList.toggle('hidden');
 };
 
-// 設置路由進入時的行為
-const route = useRoute();
-onBeforeRouteUpdate((to, from) => {
-	if (from.path === '/') {
-		isEnter.value = false;
-	}
-});
-
 // 綁定滾動事件和初始化
 onMounted(() => {
 	window.addEventListener('scroll', showElement, true);
@@ -135,13 +139,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	window.removeEventListener('scroll', showElement);
 });
-
-// const cornerFront = ref(null);
-// const cornerBack = ref(null);
-
-// console.log(cornerFront);
-// useParallax(cornerFront);
-// useParallax(cornerBack);
 </script>
 
 <style lang="scss" scoped>
