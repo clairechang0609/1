@@ -1,7 +1,7 @@
 <template>
 	<Swiper @swiper="onSwiper" class="swiper mb-2" :modules="modules" :loop="true" :slides-per-view="1">
 		<SwiperSlide v-for="(item, key) in banner" :key="`banner_${key}`" class="bg-light">
-			<img :src="getImageUrl(`/image/banner/${item}`)" alt="banner" class="banner">
+			<img :src="`/image/banner/${item}`" alt="banner" class="banner">
 		</SwiperSlide>
 	</Swiper>
 </template>
@@ -10,7 +10,7 @@
 import { watch, ref } from 'vue';
 import { Autoplay, Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { getImageUrl } from '@/utils/image';
+// import { getImageUrl } from '@/utils/image';
 
 export default {
 	name: 'Banner',

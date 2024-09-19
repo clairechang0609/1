@@ -2,7 +2,7 @@
 	<div class="home-wrap">
 		<transition>
 			<div class="landing-page fixed-top left-0 top-0 right-0 bottom-0" v-show="!isEnter">
-				<img class="bg-image" :src="getImageUrl('/image/DAN04715-2.jpg')">
+				<img class="bg-image" :src="'/image/DAN04715-2.jpg'">
 				<div class="info d-flex flex-column align-items-center text-white">
 					<img class="logo" src="@/assets/image/logo-w.png">
 					<small class="d-block mt-4 mb-5 text-center">
@@ -50,8 +50,8 @@
 							</div>
 							<div class="col-md-6">
 								<div class="image-wrap">
-									<img :src="getImageUrl('/image/home/cornerFront.jpg')" alt="cornerFront" class="corner-front">
-									<img :src="getImageUrl('/image/home/cornerBack.jpg')" alt="cornerBack" class="corner-back">
+									<img :src="'/image/home/cornerFront.jpg'" alt="cornerFront" class="corner-front">
+									<img :src="'/image/home/cornerBack.jpg'" alt="cornerBack" class="corner-back">
 								</div>
 							</div>
 						</div>
@@ -71,7 +71,7 @@
 							<router-link :to="`work/${key}/${item.id}`" class="work-item">
 								<small class="d-block fw-bold mb-3">{{ item.date }} ｜ {{ item.masthead }}</small>
 								<div class="image-wrap position-relative bg-light mb-3">
-									<img :data-src="getImageUrl(`/image/${key}/${item.images[0]}`)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+									<img :data-src="`/image/${key}/${item.images[0]}`" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
 										:alt="item.masthead" class="lazyload image position-absolute">
 								</div>
 							</router-link>
@@ -95,7 +95,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRoute, onBeforeRouteUpdate } from 'vue-router';
 import { useStore } from '@/stores/index';
-import { getImageUrl } from '@/utils/image';
+// import { getImageUrl } from '@/utils/image';
 import Banner from '@/components/Banner.vue';
 
 const store = useStore();

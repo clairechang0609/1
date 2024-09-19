@@ -1,7 +1,7 @@
 <template>
 	<Swiper class="swiper mb-2" v-bind="config">
 		<SwiperSlide v-for="(_item, key) in 13" :key="`corner_${key}`" class="d-flex justify-content-center">
-			<img :src="getImageUrl(`/image/corner/Corner-${key + 1}.jpg`)" alt="corner" class="corner h-100">
+			<img :src="`/image/corner/Corner-${key + 1}.jpg`" alt="corner" class="corner h-100">
 		</SwiperSlide>
 	</Swiper>
 </template>
@@ -9,7 +9,7 @@
 <script setup>
 import { Autoplay, Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { getImageUrl } from '@/utils/image';
+// import { getImageUrl } from '@/utils/image';
 
 const config = {
 	loop: true,
