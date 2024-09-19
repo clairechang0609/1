@@ -22,6 +22,16 @@ export default {
 		return {
 			menuList: [
 				{
+					id: 'home',
+					name: 'home',
+					path: '/'
+				},
+				{
+					id: 'corner',
+					name: '一隅',
+					path: '/corner'
+				},
+				{
 					id: 'about',
 					name: 'about',
 					path: '/about'

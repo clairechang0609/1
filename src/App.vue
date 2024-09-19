@@ -9,8 +9,27 @@
 <style lang="scss">
 @import "@/assets/scss/app.scss";
 
+body {
+	overflow-x: hidden;
+}
+
 .title-card {
 	border: 7px solid $black;
+}
+
+.subtitle {
+	position: relative;
+	display: inline-block;
+	&::before {
+		content: '';
+		position: absolute;
+		background: currentColor;
+		width: 50px;
+		height: 1px;
+		right: -70px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
 .contact-content {

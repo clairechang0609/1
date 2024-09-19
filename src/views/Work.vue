@@ -23,7 +23,7 @@
 		</div>
 		<ul class="image-content pt-4 pt-md-5">
 			<li class="image-wrap mb-4 mb-md-5" :alt="item" v-for="item in collection.images" :key="item">
-				<img :data-src="`/image/${route.params?.category}/${item}`" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+				<img :data-src="getImageUrl(`/image/${route.params?.category}/${item}`)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
 					class="lazyload image w-100">
 			</li>
 		</ul>
@@ -38,13 +38,14 @@
 <script>
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
-import defaultStore from '@/stores/index';
+import { useStore } from '@/stores/index';
+import { getImageUrl } from '@/utils/image';
 
 export default {
 	name: 'Work',
 	setup() {
 		const route = useRoute();
-		const { works } = defaultStore();
+		const { works } = useStore();
 		const category = computed(() => works[route.params?.category]);
 		const collection = computed(() => {
 			return category.value?.collections?.find(item => item.id === Number(route.params?.id));
@@ -63,22 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.work-wrap {
-		max-width: 1000px;
-	}
-	.subtitle {
-		&::before {
-			content: '';
-			position: absolute;
-			background: currentColor;
-			width: 50px;
-			height: 1px;
-			right: -70px;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	}
-	.image {
-		filter: drop-shadow(0 3px 4px rgba($black, 0.3));
-	}
+.work-wrap {
+	max-width: 1000px;
+}
+.image {
+	filter: drop-shadow(0 3px 4px rgba($black, 0.3));
+}
 </style>

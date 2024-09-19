@@ -1,5 +1,5 @@
 <template>
-	<div id="about" class="experience-content mx-auto py-3 py-sm-4 py-md-5">
+	<div class="experience-content mx-auto py-3 py-sm-4 py-md-5">
 		<div class="mb-4">
 			<div class="title-card h-100">
 				<div class="title-card-body p-3">
@@ -106,9 +106,6 @@ const experience = [ // 經歷
 <style lang="scss" scoped>
 .experience-content {
 	max-width: 1000px;
-	.title {
-		letter-spacing: 2rem;
-	}
 	.image-wrap {
 		padding-top: 100%;
 		background-image: url('@/assets/image/avatar.jpg');
