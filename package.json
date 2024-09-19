@@ -18,6 +18,8 @@
     "bootstrap-icons": "^1.8.1",
     "bootstrap-input-spinner": "^2.1.2",
     "core-js": "^3.6.5",
+    "imagemin": "^9.0.0",
+    "imagemin-webp": "^8.0.0",
     "imports-loader": "^0.8.0",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.21",

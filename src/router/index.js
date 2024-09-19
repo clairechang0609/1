@@ -14,6 +14,11 @@ const routes = [
 				name: 'Work',
 				path: 'work/:category/:id',
 				component: () => import('@/views/Work.vue')
+			},
+			{
+				name: 'About',
+				path: 'about',
+				component: () => import('@/views/About.vue')
 			}
 		]
 	},

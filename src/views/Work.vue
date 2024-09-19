@@ -66,9 +66,6 @@ export default {
 	.work-wrap {
 		max-width: 1000px;
 	}
-	.title-card {
-		border: 7px solid $black;
-	}
 	.subtitle {
 		&::before {
 			content: '';

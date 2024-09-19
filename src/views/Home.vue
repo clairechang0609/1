@@ -2,7 +2,7 @@
 	<div class="home-wrap">
 		<transition>
 			<div class="landing-page fixed-top left-0 top-0 right-0 bottom-0" v-show="!isEnter">
-				<img class="bg-image" src="/image/DAN04715-2.jpg">
+				<img class="bg-image" :src="getImageUrl('/image/DAN04715-2.jpg')">
 				<div class="info d-flex flex-column align-items-center text-white">
 					<img class="logo" src="@/assets/image/logo-w.png">
 					<small class="d-block mt-4 mb-5 text-center">
@@ -28,46 +28,8 @@
 					</div>
 				</div>
 			</div>
-			<!-- about -->
-			<div id="about" class="experience-content mx-auto py-3 py-sm-4 py-md-5">
-				<div class="mb-3">
-					<h4 class="title lh-lg me-4 fs-md-2">關於我</h4>
-					<h5 class="subtitle fs-md-4">about</h5>
-				</div>
-				<div class="row gx-md-5">
-					<div class="col-sm-8 mb-3 mb-sm-0 order-2 order-sm-1">
-						<ul class="lh-lg">
-							<li v-for="(item, index) in experience" :key="`experience_${index}`" class="mt-3">
-								<p class="fw-bold fs-7">
-									{{ item.during }}｜{{ item.company }} {{ item.title }}
-									<template v-if="item.titleList?.length">
-										<small class="d-block" v-for="(titleItem, key) in item.titleList" :key="`title_${index}_${key}`">
-											{{ titleItem.name }} {{ titleItem.during }}
-										</small>
-									</template>
-								</p>
-								<div class="d-flex flex-column ms-sm-3 mt-2">
-									<small v-for="(publishItem, key) in item.publish" :key="`publish_${index}_${key}`" class="mt-1">
-										- {{ publishItem }}
-									</small>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="col-sm-4 align-self-end order-1 order-sm-2">
-						<small class="d-block lh-lg mb-3">
-							<span class="name fs-7 fw-bold">Daniel Chang 張景棠</span> <br />
-							Editor - Writer - Shutterbug
-						</small>
-						<div class="image-wrap bg-light mb-2 mb-md-4"></div>
-						<!-- <div class="text-end mb-2">
-							<a href="#" class="profile-link fs-7 ms-auto py-1">
-								profile<i class="bi bi-arrow-right ms-1"></i>
-							</a>
-						</div> -->
-					</div>
-				</div>
-			</div>
+			<!-- 一隅 -->
+			<div></div>
 			<!-- works -->
 			<div id="work" class="work-content pt-4 pt-md-5">
 				<div v-for="(work, key) in works" :key="key" class="work-wrap pb-3 pb-md-5">
@@ -102,6 +64,7 @@
 </template>
 
 <script>
+import { getImageUrl } from '@/utils/image.js';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import defaultStore from '@/stores/index';
 import Banner from '@/components/Banner.vue';
@@ -121,52 +84,6 @@ export default {
 	setup() {
 		const { works } = defaultStore();
 		const isEnter = ref(true);
-		const experience = [ // 經歷
-			{
-				during: '2023-now',
-				company: '自由製造有限公司',
-				title: 'Founder',
-				publish: []
-			},
-			{
-				during: '2019-2023',
-				company: '華訊事業股份有限公司',
-				title: '副總編輯',
-				titleList: [
-					{
-						during: '2022-2023',
-						name: '代編部 副總編輯'
-					},
-					{
-						during: '2019-2022',
-						name: '代編部 主編'
-					}
-				],
-				publish: [
-					'Infinite 台新無限季刊（台新銀行無限卡會員刊物）',
-					'合庫樂活理財季刊（合作金庫理財季刊）',
-					'terroir 肥沃台灣（台灣肥料企業形象刊物）',
-					'dawn 曙光季刊（國立臺東生活美學館）',
-					'Ciao 潮旅（華訊與中華航空異業合作旅遊刊物）'
-				]
-			},
-			{
-				during: '2016-2019',
-				company: '意念文創股份有限公司',
-				title: '主編',
-				publish: [
-					'tigertales 台灣虎航機上雜誌',
-					'Inspire 意念圖誌',
-					'My Plus 加分誌'
-				]
-			},
-			{
-				during: '2015-2016',
-				company: '世界公民文化中心',
-				title: '企劃編輯',
-				publish: [ '英語島雜誌' ]
-			}
-		];
 
 		const showElement = () => { // 顯示內容動態效果
 			const workItems = document.querySelectorAll('.work');
@@ -194,11 +111,11 @@ export default {
 		return {
 			// data
 			isEnter,
-			experience,
 			works,
 			// methods
 			toggleBodyClass,
-			showElement
+			showElement,
+			getImageUrl
 		};
 	}
 };
@@ -312,17 +229,6 @@ export default {
 			letter-spacing: 1rem;
 		}
 	}
-	.experience-content {
-		max-width: 1000px;
-		.title {
-			letter-spacing: 2rem;
-		}
-		.image-wrap {
-			padding-top: 100%;
-			background-image: url('@/assets/image/avatar.jpg');
-			@include backgroundImage;
-		}
-	}
 	.work-content {
 		.title {
 			letter-spacing: 0.5rem;
@@ -370,21 +276,6 @@ export default {
 				transform: translate(-50%, -50%);
 				filter: drop-shadow(0 0.25rem 0.15rem rgba($black, 0.2));
 				transition: 0.8s;
-			}
-		}
-	}
-	.contact-content {
-		max-width: 750px;
-		.title {
-			letter-spacing: 0.5rem;
-			top: -1.5rem;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-		.email {
-			text-decoration: underline;
-			&:hover {
-				opacity: 0.6;
 			}
 		}
 	}
