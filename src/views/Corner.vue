@@ -19,6 +19,87 @@
 
 					<div class="mb-5">
 						<div class="d-flex align-items-center mb-3">
+							<h5 class="subtitle me-5">商品說明</h5>
+						</div>
+						<p>
+							《一隅》是由自由製造編輯製作，創立於 2024 年，<br>
+							來自於台灣，從狹小的一隅之地出發，提供屬於這塊土地上的一隅之見，<br>
+							將世界上各個角落發生的故事，透過文字與圖像的結合，帶領讀者沈浸現場，激起思考的火花。<br>
+							以特刊形式發行，探討的內容領域包括：藝術設計、靈感創意、人文思潮、生活風格。<br><br>
+
+							「觀看的方式」概念發想來自文化藝術評論家John Berger的著作《觀看的方式》，<br>
+							書中主要著重在繪畫和廣告，我們將觀看焦點放在攝影和視覺藝術，<br>
+							透過採訪這些藝術創作者，進入他們的創作歷程，<br>
+							看到每個人獨一無二的視角與詮釋，這是來自於他們的人生、知識體系和信仰的交會。
+						</p>
+					</div>
+
+					<div class="mb-5">
+						<div class="d-flex align-items-center mb-3">
+							<h5 class="subtitle me-5">目錄</h5>
+						</div>
+						<ul>
+							<li class="fw-light fs-7">04 觀看之前</li>
+							<li class="mt-3 mb-2 fw-bold">I People</li>
+							<li class="fw-light fs-7">
+								08 不停地拍，紀錄下香港的變與不變<br>
+								攝影師林振東
+							</li>
+							<li class="fw-light fs-7">
+								14 一封傳遞溫暖與描繪生活輪廓的影像家書<br>
+								攝影師沈倩如
+							</li>
+							<li class="fw-light fs-7">
+								24 在街上找尋屬於自己獨一無二的視框<br>
+								攝影師張道慈
+							</li>
+							<li class="fw-light fs-7">
+								34 從一位攝影師及母親的身份觀看: 透過攝影捕捉不同面向的我<br>
+								攝影師廖文瑄 Sha
+							</li>
+							<li class="fw-light fs-7">
+								42 追逐我所謂的風景<br>
+								攝影師黃柏雯
+							</li>
+							<li class="fw-light fs-7">
+								50 文字是一幅圖像 每個人都可以有自己的詮釋<br>
+								書法家王意淳
+							</li>
+							<li class="mt-3 mb-2 fw-bold">II Portfolio</li>
+							<li class="fw-light fs-7">
+								60 充滿詩意的超現實場景<br>
+								攝影師 Minh T
+							</li>
+							<li class="fw-light fs-7">
+								62 探尋都市的狂熱與躁動<br>
+								攝影藝術家 Laurent Dequick
+							</li>
+							<li class="fw-light fs-7">
+								64 想像力是你的超能力<br>
+								攝影藝術家 Florian Müller
+							</li>
+							<li class="fw-light fs-7">
+								66 捕捉微小卻珍貴的日常<br>
+								攝影師 Yuki Takizawa
+							</li>
+							<li class="fw-light fs-7">
+								68 身歷其境的旅行方式<br>
+								攝影師 Pier Luigi Aldinucci
+							</li>
+							<li class="fw-light fs-7">
+								70 城市裡的光影詩人<br>
+								攝影師 Fernando Pedro Salgado
+							</li>
+							<li class="mt-3 mb-2 fw-bold">III Flow</li>
+							<li class="fw-light fs-7">
+								72 Find Your Flow<br>
+								Daniel Chang
+							</li>
+						</ul>
+					</div>
+
+					<div class="mb-5">
+						<div class="d-flex align-items-center mb-3">
 							<h5 class="subtitle me-5">售　　價</h5>
 							<h6 class="ps-5">NT$380</h6>
 						</div>
@@ -51,25 +132,8 @@
 							銀行代碼：812-0045<br>
 							銀行名稱：台新國際商業銀行-新生分行<br>
 							帳號：2004-01-0001201-4<br>
-							Line Pay：<br>
+							<strong>Line Pay：</strong><br>
 							<img src="/image/corner/linepay.jpg" alt="Line Pay" width="100">
-						</p>
-					</div>
-
-					<div class="mb-5">
-						<div class="d-flex align-items-center mb-3">
-							<h5 class="subtitle me-5">商品說明</h5>
-						</div>
-						<p>
-							《一隅》是由自由製造編輯製作，創立於 2024 年，<br>
-							來自於台灣，從狹小的一隅之地出發，提供屬於這塊土地上的一隅之見，<br>
-							將世界上各個角落發生的故事，透過文字與圖像的結合，帶領讀者沈浸現場，激起思考的火花。<br>
-							以特刊形式發行，探討的內容領域包括：藝術設計、靈感創意、人文思潮、生活風格。<br><br>
-
-							「觀看的方式」概念發想來自文化藝術評論家John Berger的著作《觀看的方式》，<br>
-							書中主要著重在繪畫和廣告，我們將觀看焦點放在攝影和視覺藝術，<br>
-							透過採訪這些藝術創作者，進入他們的創作歷程，<br>
-							看到每個人獨一無二的視角與詮釋，這是來自於他們的人生、知識體系和信仰的交會。
 						</p>
 					</div>
 

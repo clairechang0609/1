@@ -111,7 +111,7 @@ import { useStore } from '@/stores/index';
 import Banner from '@/components/Banner.vue';
 
 const store = useStore();
-const isEnter = ref(false);
+const isEnter = ref(true);
 
 // 顯示內容動態效果
 const showElement = () => {
@@ -139,6 +139,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	window.removeEventListener('scroll', showElement);
 });
+
+defineExpose({ isEnter })
 </script>
 
 <style lang="scss" scoped>
