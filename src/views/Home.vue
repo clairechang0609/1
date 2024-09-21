@@ -40,12 +40,14 @@
 							<div class="col-md-6 bg-light bg-opacity-50 border border-light d-flex align-items-center justify-content-center">
 								<div class="p-5">
 									<h4 class="mb-4 subtitle">觀看的方式</h4>
-									<p>
-										一個凝視和觀看可以是愛，可以象徵權力，<br>
-										也可以是一種禁忌、自戀和自我認同，<br>
+									<p class="text-justify">
+										一個凝視和觀看可以是愛，可以象徵權力，<br class="d-none d-lg-block" />
+										也可以是一種禁忌、自戀和自我認同，<br class="d-none d-lg-block" />
 										它更是一種「觀點」和「視角」的展現。
 									</p>
-									<router-link to="/corner" class="btn btn-outline-primary w-100 py-4 mt-4">購買連結 Link to Purchase</router-link>
+									<router-link to="/corner" class="btn btn-outline-primary w-100 py-4 mt-4">
+										購買連結 <br class="d-md-none" />Link to Purchase
+									</router-link>
 								</div>
 							</div>
 							<div class="col-md-6">

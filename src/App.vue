@@ -47,4 +47,8 @@ body {
 		}
 	}
 }
+
+.text-justify {
+	text-align: justify;
+}
 </style>
