@@ -46,7 +46,7 @@
 										它更是一種「觀點」和「視角」的展現。
 									</p>
 									<router-link to="/corner" class="btn btn-outline-primary w-100 py-4 mt-4">
-										購買連結 <br class="d-md-none" />Link to Purchase
+										觀看更多｜購買資訊 <br />Link to Purchase
 									</router-link>
 								</div>
 							</div>
