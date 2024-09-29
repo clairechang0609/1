@@ -5,7 +5,7 @@
 			<router-view></router-view>
 		</div>
 		<div class="footer text-center border-top border-dark py-4 py-md-5">
-			<small>Copyright © daniel 2024, All rights reserved.</small>
+			<small>Copyright © freestylestudio 2024, All rights reserved.</small>
 		</div>
 	</div>
 </template>
